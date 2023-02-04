@@ -2,6 +2,6 @@ package com.example.kotlinproject
 
 
 fun main(){
-   val first=5
-   println(first)
+   val home ="Home screen"
+   println(home)
 }
