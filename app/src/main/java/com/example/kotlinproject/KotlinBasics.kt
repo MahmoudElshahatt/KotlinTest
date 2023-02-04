@@ -2,5 +2,6 @@ package com.example.kotlinproject
 
 
 fun main(){
-   println("This is a string")
+   val first=5
+   println(first)
 }
