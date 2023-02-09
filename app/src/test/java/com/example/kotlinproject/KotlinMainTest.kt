@@ -123,4 +123,22 @@ internal class KotlinMainTest {
         //Then
         assertNull(average)
     }
+    @Test
+    fun should_ReturnSortedListOfLargest3Numbers_When_EnterListLargerThan3() {
+        //Given
+        val array= arrayOf(5,9,12,6)
+        //When
+        val largestThreeNums= getLargestThreeNumbersOrNull(array)
+        //Then
+        assertArrayEquals(arrayOf(12,9,6),largestThreeNums)
+    }
+    @Test
+    fun should_ReturnNull_When_EnterListSmallerThan3() {
+        //Given
+        val array= arrayOf(5,6)
+        //When
+        val largestThreeNums= getLargestThreeNumbersOrNull(array)
+        //Then
+        assertNull(largestThreeNums)
+    }
 }
