@@ -52,6 +52,16 @@ internal class KotlinMainTest {
         assertEquals(11,average)
     }
     @Test
+    fun should_ReturnAverage_When_AverageCanBeRounded() {
+        //Given
+        val age = 18
+        val height = 192
+        //When
+        val average= getAverageGrowth(age,height)
+        //Then
+        assertEquals(11,average)
+    }
+    @Test
     fun should_ReturnMinus1_When_AgeLargerThan18() {
         //Given
         val age = 25
