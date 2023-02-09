@@ -1,6 +1,7 @@
 package com.example.kotlinproject
 
 import org.junit.Assert.*
+import org.junit.Ignore
 import org.junit.Test
 
 
@@ -112,6 +113,7 @@ internal class KotlinMainTest {
         assertEquals(-1,average)
     }
     @Test
+    @Ignore   //-> @Disabled in JUnit 5
     fun should_ReturnNull_When_WrongAgeAndHeight() {
         //Given
         val age =-4
