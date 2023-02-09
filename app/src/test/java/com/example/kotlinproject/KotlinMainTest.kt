@@ -41,4 +41,64 @@ internal class KotlinMainTest {
         //Then
         assertThrows(Exception::class.java) { divide(num1, num2) }
     }
+    @Test
+    fun should_ReturnAverage_When_HaveCorrectInput() {
+        //Given
+        val age = 10
+        val height = 110
+        //When
+       val average= getAverageGrowth(age,height)
+        //Then
+        assertEquals(11,average)
+    }
+    @Test
+    fun should_ReturnMinus1_When_AgeLargerThan18() {
+        //Given
+        val age = 25
+        val height = 175
+        //When
+        val average= getAverageGrowth(age,height)
+        //Then
+        assertEquals(-1,average)
+    }
+    @Test
+    fun should_ReturnMinus1_When_AgeIsZero() {
+        //Given
+        val age =0
+        val height = 175
+        //When
+        val average= getAverageGrowth(age,height)
+        //Then
+        assertEquals(-1,average)
+    }
+    @Test
+    fun should_ReturnMinus1_When_AgeIsNegative() {
+        //Given
+        val age =-5
+        val height = 175
+        //When
+        val average= getAverageGrowth(age,height)
+        //Then
+        assertEquals(-1,average)
+    }
+    @Test
+    fun should_ReturnMinus1_When_HeightSmallerThan30() {
+        //Given
+        val age =16
+        val height = 25
+        //When
+        val average= getAverageGrowth(age,height)
+        //Then
+        assertEquals(-1,average)
+    }
+    @Test
+    fun should_ReturnMinus1_When_WrongAgeAndHeight() {
+        //Given
+        val age =-4
+        val height = 300
+        //When
+        val average= getAverageGrowth(age,height)
+        //Then
+        assertEquals(-1,average)
+    }
 }
