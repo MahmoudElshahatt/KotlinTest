@@ -111,4 +111,14 @@ internal class KotlinMainTest {
         //Then
         assertEquals(-1,average)
     }
+    @Test
+    fun should_ReturnNull_When_WrongAgeAndHeight() {
+        //Given
+        val age =-4
+        val height = 300
+        //When
+        val average= getAverageGrowthNullable(age,height)
+        //Then
+        assertNull(average)
+    }
 }

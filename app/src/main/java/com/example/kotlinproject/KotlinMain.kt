@@ -15,3 +15,7 @@ fun getAverageGrowth(age: Int, height: Int): Int {
     if (age !in 1..18 || height !in 30..210) return -1
     return (1f * height / age).roundToInt()
 }
+fun getAverageGrowthNullable(age: Int, height: Int): Int? {
+    if (age !in 1..18 || height !in 30..210) return null
+    return (1f * height / age).roundToInt()
+}
